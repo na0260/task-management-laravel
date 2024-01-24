@@ -1,13 +1,13 @@
-<x-app-layouts title="Task Lists">
+<x-app-layout title="Task Lists">
     <x-slot name="content">
         <div class="container">
             <div class="row">
                 <div class="col-12 mx-auto">
                     <div class="card my-4">
-                        <h1 class="bg-dark text-center py-2 text-white">Blogs</h1>
+                        <h1 class="bg-dark text-center py-2 text-white">Tasks</h1>
                         <div class="card-header">
                             <i class="fas fa-table me-1"></i>
-                            Showing All Blog
+                            Showing All Tasks
                         </div>
                         <div class="card-body">
                             <table id="datatablesSimple">
@@ -49,4 +49,4 @@
             </div>
         </div>
     </x-slot>
-</x-app-layouts>
+</x-app-layout>
