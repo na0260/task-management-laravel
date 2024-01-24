@@ -37,9 +37,10 @@ class TaskController extends Controller
         return redirect('task/list')->with('msg', 'Task has been added successfully');
     }
 
-    public function edit()
+    public function edit($taskId)
     {
-
+        $task = Task::find($taskId);
+        return view('backend.task.edit', ['task' => $task]);
     }
 
     public function update()
