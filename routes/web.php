@@ -30,6 +30,7 @@ Route::get('/dashboard', function () {
 Route::middleware('auth')->group(function () {
     Route::get('/task/list', [TaskController::class, ('index')])->name('task.list');
     Route::get('/task/add', [TaskController::class, ('create')])->name('task.create');
+    Route::post('/task/store', [TaskController::class, ('store')])->name('task.store');
 });
 
 require __DIR__.'/auth.php';

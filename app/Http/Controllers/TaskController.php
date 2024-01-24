@@ -19,9 +19,22 @@ class TaskController extends Controller
         return view('backend.task.create');
     }
 
-    public function store()
+    public function store(Request $request)
     {
+        $request->validate(
+            [
+                'title' => 'max:100|required',
+                'description' => 'required',
+                'due_date' => 'date|required',
+            ]
+        );
+        $task = new Task();
+        $task->title = $request->title;
+        $task->description = $request->description;
+        $task->due_date = $request->due_date;
+        $task->save();
 
+        return redirect('task/list')->with('msg', 'Task has been added successfully');
     }
 
     public function edit()

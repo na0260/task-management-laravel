@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="col-6 mx-auto mt-5">
                         <h1 class="bg-dark text-center py-2 text-white">Add New Task</h1>
-                        <form class="row g-3" action="" method="POST" enctype="multipart/form-data">
+                        <form class="row g-3" action="{{route('task.store')}}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-12">
                                 <label class="form-label">Title:</label>

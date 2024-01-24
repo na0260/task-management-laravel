@@ -22,20 +22,21 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach ($tasks as $blog)
+                                @foreach ($tasks as $task)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $task->title }}</td>
                                         <td width='40%'>{{ $task->description }}</td>
                                         <td>{{ $task->due_date }}</td>
-                                        <td width='10%' align="center">
+                                        <td >
                                         <span
-                                            class="text-{{ $task->status == 'completed' ? 'success' : 'danger' }} ">{{ $task->status == 'completed' ? 'Active' : 'Inactive' }}
+                                            class="text-{{ $task->status == 'completed' ? 'success' : 'danger' }} ">{{ $task->status == 'completed' ? 'Complete' : 'Pending' }}
                                         </span>
+                                            &nbsp;
                                             <a href=""
-                                               class="btn {{ $task->status == 'completed' ? 'btn-danger' : 'btn-success' }}">{{ $task->status == 'completed' ? 'Inactive' : 'Active' }}</a>
+                                               class="btn {{ $task->status == 'completed' ? 'btn-danger' : 'btn-success' }}">{{ $task->status == 'completed' ? 'Pending' : 'Complete' }}</a>
                                         </td>
-                                        <td width='10%' align="center">
+                                        <td>
                                             <a href=""
                                                class="btn btn-sm btn-primary">Edit</a>
                                         </td>
@@ -43,6 +44,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
+                            <p class="text-success fw-bold">{{Session::get('msg')}}</p>
                         </div>
                     </div>
                 </div>
