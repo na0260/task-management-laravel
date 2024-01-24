@@ -28,7 +28,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
-    route::get('/task/list', [TaskController::class, ('index')])->name('task.list');
+    Route::get('/task/list', [TaskController::class, ('index')])->name('task.list');
+    Route::get('/task/add', [TaskController::class, ('create')])->name('task.create');
 });
 
 require __DIR__.'/auth.php';

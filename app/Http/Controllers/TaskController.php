@@ -16,7 +16,7 @@ class TaskController extends Controller
 
     public function create()
     {
-
+        return view('backend.task.create');
     }
 
     public function store()
