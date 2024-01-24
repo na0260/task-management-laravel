@@ -43,9 +43,22 @@ class TaskController extends Controller
         return view('backend.task.edit', ['task' => $task]);
     }
 
-    public function update()
+    public function update(Request $request, $taskId)
     {
+        $request->validate(
+            [
+                'title' => 'max:100|required',
+                'description' => 'required',
+                'due_date' => 'date|required',
+            ]
+        );
+        $task = Task::find($taskId);
+        $task->title = $request->title;
+        $task->description = $request->description;
+        $task->due_date = $request->due_date;
+        $task->save();
 
+        return redirect('task/list')->with('msg', 'Task has been updated successfully');
     }
 
     public function status()

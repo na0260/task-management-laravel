@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/task/add', [TaskController::class, ('create')])->name('task.create');
     Route::get('/task/edit/{taskId}', [TaskController::class, ('edit')])->name('task.edit');
     Route::post('/task/store', [TaskController::class, ('store')])->name('task.store');
+    Route::post('/task/update/{taskId}', [TaskController::class, ('update')])->name('task.update');
 });
 
 require __DIR__.'/auth.php';
