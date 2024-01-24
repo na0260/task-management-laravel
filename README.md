@@ -25,10 +25,14 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 1. Clone the repository to your local machine
 2. Create an database name 'task_management' and import the task_management.sql file
-3. Run the command `npm install` to install all the dependencies
-4. Run the command 'php artisan serve' to start the server
-5. Email and password will be set by default. just press login button to enter the dashboard. (Email: admin@mail.com, Password: Admin123)
-6. Enjoy the system.
+3. Open the terminal and go to the project directory.
+4. Run the command 'cp .env.example .env'
+5. Open the .env file and change the database name to task_management
+6. Run the command `composer install` to install all the dependencies
+7. Run the command `npm install` to install all the dependencies
+8. Run the command 'php artisan serve' to start the server
+9. Email and password is set by default. just press login button to enter the dashboard. (Email: admin@mail.com, Password: Admin123)
+10. Enjoy the system.
 
 ## Learning Laravel
 
