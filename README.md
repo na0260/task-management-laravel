@@ -21,6 +21,15 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## How to run the project
+
+1. Clone the repository to your local machine
+2. Create an database name 'task_management' and import the task_management.sql file
+3. Run the command `npm install` to install all the dependencies
+4. Run the command 'php artisan serve' to start the server
+5. Email and password will be set by default. just press login button to enter the dashboard. (Email: admin@mail.com, Password: Admin123)
+6. Enjoy the system.
+
 ## Learning Laravel
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
