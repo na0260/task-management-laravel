@@ -61,8 +61,15 @@ class TaskController extends Controller
         return redirect('task/list')->with('msg', 'Task has been updated successfully');
     }
 
-    public function status()
+    public function status($taskId)
     {
-
+        $task = Task::find($taskId);
+        if ($task->status == 'completed') {
+            $task->status = 'pending';
+        } else {
+            $task->status = 'completed';
+        }
+        $task->save();
+        return redirect()->back()->with('msg', 'Task status has been updated successfully');
     }
 }

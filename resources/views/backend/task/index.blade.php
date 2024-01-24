@@ -30,14 +30,14 @@
                                         <td>{{ $task->due_date }}</td>
                                         <td >
                                         <span
-                                            class="text-{{ $task->status == 'completed' ? 'success' : 'danger' }} ">{{ $task->status == 'completed' ? 'Complete' : 'Pending' }}
+                                            class="text-{{ $task->status == 'completed' ? 'success' : 'danger' }} ">{{ $task->status == 'completed' ? 'Completed' : 'Pending' }}
                                         </span>
                                             &nbsp;
-                                            <a href=""
-                                               class="btn {{ $task->status == 'completed' ? 'btn-danger' : 'btn-success' }}">{{ $task->status == 'completed' ? 'Pending' : 'Complete' }}</a>
+                                            <a href="{{route('task.status',$task->id)}}"
+                                               class="btn {{ $task->status == 'completed' ? 'btn-danger' : 'btn-success' }}">{{ $task->status == 'completed' ? 'Pending' : 'Completed' }}</a>
                                         </td>
                                         <td>
-                                            <a href=""
+                                            <a href="{{route('task.edit',$task->id)}}"
                                                class="btn btn-sm btn-primary">Edit</a>
                                         </td>
                                     </tr>
