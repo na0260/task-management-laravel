@@ -14,12 +14,12 @@
 </head>
 
 <body class="sb-nav-fixed">
-<x-backend.header/>
+<x-components.backend.header/>
 <div id="layoutSidenav_content">
     <main>
         {{$content}}
     </main>
-    <x-backend.footer/>
+    <x-components.backend.footer/>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
